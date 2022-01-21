@@ -1,17 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-$fontseph: 'Poppins', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Poppins:wght@400;700&display=swap');
+$fontseph: 'Poppins', 'Noto Sans KR', sans-serif;
 $body-size: 18px;
 $transition-speed: 0.3s;
 $accent-color: #5FA1F7;
 $background-color: #F0F6FE;
-
 .container {
   margin: 0 auto;
   max-width: 1800px;
   width: 90%;
-  padding: 60px 0;
+  padding: 40px 0 20px 0;
 }
-
 @media only screen and (min-width: 601px) {
   .container {
     width: 85%; } }
@@ -21,7 +19,6 @@ $background-color: #F0F6FE;
 .col .row {
   margin-left: -0.75rem;
   margin-right: -0.75rem; }
-
 .section {
   padding-top: 1rem;
   padding-bottom: 1rem; }
@@ -591,6 +588,12 @@ body {
 }
 h1 {
   font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+h2 {
+  font-size: 24px;
+  font-weight: bold;
 }
 #navItems {
   background: $background-color;
@@ -599,7 +602,6 @@ h1 {
   text-align: right;
   width: 100%;
   box-sizing: border-box;
-  position: fixed;
   top: 0;
   left: 0;
   height: 60px;
@@ -653,7 +655,7 @@ h1 {
 }
 .hamburger-menu {
   cursor: pointer;
-  position: fixed;
+  position: absolute;
   top: 25px;
   right: 20px;
   z-index: 9999;
@@ -699,23 +701,25 @@ h1 {
     }
   }
 }
-.sticky {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-}
-.sticky > nav {
-  position: absolute;
-  align-self: start;
-  margin-top: 80px;
-}
 .joseph-nft {
   width:100%;
   max-width: 100%;
 }
+.banner {
+  width: 100%;
+  background-color: #C3DCFC;
+  height: 200px;
+  line-height: 200px;
+  border-radius: 4px;
+  text-align: center;
+  span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;  }
+}
 .card {
   background-color: white;
-  box-shadow: 0 3px 7px -1px rgba(#000, .1);
+  box-shadow: 0 3px 7px -1px #ccd1d8;
   border-radius: 4px;
   margin: 0;
   padding: 16px 32px;
@@ -723,10 +727,14 @@ h1 {
 .message-info {
   list-style-type: none;
   padding: 8px 0 16px 0;
-  li {
-    display: inline-block;
-    padding: 0 20px 0 0;
-    text-transform: none;
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      display: inline-block;
+      padding: 0 20px 0 0;
+      text-transform: none;
+    }
   }
 }
 .message {
@@ -744,8 +752,14 @@ footer {
   body {
     font-size: 16px;
   }
+  h1, h2 {
+    font-size: 20px;
+  }
 }
 @media only screen and (max-width: 601px) {
+  .container {
+    padding: 24px 0 12px 0;
+  }
   #navItems {
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
