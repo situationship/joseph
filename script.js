@@ -6,40 +6,18 @@ function toggleMenu() {
         opacity: "toggle"
     }, 300);
 }
-//smooth scroll
-$(document).ready(function(){
-    // Add smooth scrolling to all links
-    $("a").on('click', function(event) {
-
-        // Make sure this.hash has a value before overriding default behavior
-        if (this.hash !== "") {
-            // Prevent default anchor click behavior
-            event.preventDefault();
-
-            // Store hash
-            var hash = this.hash;
-
-            // Using jQuery's animate() method to add smooth page scroll
-            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-            $('html, body').animate({
-                scrollTop: $(hash).offset().top
-            }, 800, function(){
-
-                // Add hash (#) to URL when done scrolling (default click behavior)
-                window.location.hash = hash;
-            });
-        } // End if
-    });
-});
 //carousel swipe
 $(".carousel").swipe({
-
     swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
-
         if (direction == 'left') $(this).carousel('next');
         if (direction == 'right') $(this).carousel('prev');
-
     },
     allowPageScroll:"vertical"
-
+});
+//collapsible
+$('.panel-collapse').on('show.bs.collapse', function () {
+    $(this).siblings('.panel-heading').addClass('active');
+});
+$('.panel-collapse').on('hide.bs.collapse', function () {
+    $(this).siblings('.panel-heading').removeClass('active');
 });
