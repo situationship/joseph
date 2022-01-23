@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Poppins:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Poppins:ital,wght@0,400;0,700;1,400&display=swap");
 * {
   cursor: url(https://cur.cursors-4u.net/food/foo-2/foo122.cur), auto !important; }
 
@@ -906,7 +906,8 @@ h2 {
   box-shadow: 0 3px 7px -1px #ccd1d8;
   border-radius: 4px;
   margin: 0;
-  padding: 16px 32px; }
+  padding: 16px 32px;
+  overflow-wrap: break-word; }
 
 .message-info {
   list-style-type: none;
